@@ -1,0 +1,60 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="customers_to_orders.Cust_to_Orders" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+		<HBox>
+		
+			<Table items="{/Customers}" visible="true"
+	           id="idTable" width="95%" 
+	           >
+	          <columns>
+	              <Column>
+	                 <header>
+	                    <Text text="Customer ID"/>
+	                 </header>
+	              </Column>
+	              <Column>
+	                 <header>
+	                    <Text text="Name"/>
+	                 </header>
+	              </Column>
+	          </columns>
+	          <items>
+	             <ColumnListItem type="Active" press="onColumnListItemSelection">
+	                  <cells>
+	                       <Text text="{CustomerID}"/>
+	                       <Text text="{ContactName}"/>
+	                  </cells>
+	             </ColumnListItem>
+	          </items>
+	       </Table>
+	       
+	       
+	       
+	       <Table  visible="false"
+	           id="idprodsss" width="95%"
+	           >
+	          <columns>
+	              <Column>
+	                 <header>
+	                    <Text text="Order ID"/>
+	                 </header>
+	              </Column>
+	              <Column>
+	                 <header>
+	                    <Text text="Customer ID"/>
+	                 </header>
+	              </Column>
+	          </columns>
+	         <!--  <items>
+	             <ColumnListItem>
+	                  <cells>
+	                       <Text text="{OrderID}"/>
+	                       <Text text="{CustomerID}"/>
+	                  </cells>
+	             </ColumnListItem>
+	          </items> -->
+	       </Table></HBox>
+		</content>
+	</Page>
+</core:View>
